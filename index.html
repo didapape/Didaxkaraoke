@@ -284,14 +284,14 @@
              }
 
 
-            console.log(`Searching for: ${query}`);
+            console.log(`Searching for: ${query} karoke`);
             searchResultsContainer.innerHTML = '';
             emptySearchMessage.classList.add('hidden'); // Ocultar mensaje inicial
             loadingIndicator.classList.remove('hidden');
             searchButton.disabled = true;
-            searchInput.disabled = true;
-query =query + " karaoke" ;
-            const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&videoEmbeddable=true&key=${YOUTUBE_API_KEY}&maxResults=${MAX_RESULTS}`;
+            searchInput.disabled = true; 
+
+            const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)} karaoke&type=video&videoEmbeddable=true&key=${YOUTUBE_API_KEY}&maxResults=${MAX_RESULTS}`;
 
             try {
                 const response = await fetch(url);
